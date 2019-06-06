@@ -8,6 +8,14 @@ namespace ConsoleAppTest
     {
         static void Main(string[] args)
         {
+            //Guid guid0 = new Guid("bde3e4a8-524b-4b63-a511-1daf6d6f192d");
+            //Guid guid1 = new Guid("c0796d59-2ef3-483b-9582-5b547e7916c1");
+            //Guid guid2 = new Guid("c0fb930c-326c-4f81-ad47-8af9dbe630a5");
+
+            Guid guid33 = new Guid("C0FB930C-326C-4F81-AD47-8AQ96BE630A5");
+
+            Guid guid3 = new Guid("c0fb930c-326c-4f81-ad47-8aq96be630a5");
+
             //Dictionary<string, string> valuePairs = new Dictionary<string, string>();
 
             //valuePairs.Add("createuserid", "张三");
