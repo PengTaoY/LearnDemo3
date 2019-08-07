@@ -25,7 +25,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateOperator", "DateOperato
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoTo语句", "GoTo语句\GoTo语句.csproj", "{FD6FC84B-FD08-4DF7-99AF-7D4193AF17C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LockTest", "LockTest\LockTest.csproj", "{F8F84C16-D6FC-476E-A080-194829680A86}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LockTest", "LockTest\LockTest.csproj", "{F8F84C16-D6FC-476E-A080-194829680A86}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebClientTest", "WebClientTest\WebClientTest.csproj", "{2D28BAD7-4D7D-475F-99AE-CC6AB09B6B83}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{F8F84C16-D6FC-476E-A080-194829680A86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8F84C16-D6FC-476E-A080-194829680A86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8F84C16-D6FC-476E-A080-194829680A86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D28BAD7-4D7D-475F-99AE-CC6AB09B6B83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D28BAD7-4D7D-475F-99AE-CC6AB09B6B83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D28BAD7-4D7D-475F-99AE-CC6AB09B6B83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D28BAD7-4D7D-475F-99AE-CC6AB09B6B83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
