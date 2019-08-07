@@ -16,6 +16,14 @@ namespace WebClientTest
 
             var s = System.Web.HttpUtility.UrlEncode(url);
 
+            HttpItem httpItem = new HttpItem
+            {
+                URL = "http://www.ething.net"
+            };
+            HttpHelper httpHelper = new HttpHelper();
+
+            var result = httpHelper.GetHtml(httpItem);
+
             Console.ReadKey();
             Console.WriteLine("Hello World!");
         }
