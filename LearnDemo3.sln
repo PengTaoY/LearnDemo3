@@ -29,6 +29,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LockTest", "LockTest\LockTe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebClientTest", "WebClientTest\WebClientTest.csproj", "{2D28BAD7-4D7D-475F-99AE-CC6AB09B6B83}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dockerTest", "dockerTest\dockerTest.csproj", "{0CA9D3F9-A0D3-4CB4-87E2-DE0BF659E405}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{2D28BAD7-4D7D-475F-99AE-CC6AB09B6B83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D28BAD7-4D7D-475F-99AE-CC6AB09B6B83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D28BAD7-4D7D-475F-99AE-CC6AB09B6B83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CA9D3F9-A0D3-4CB4-87E2-DE0BF659E405}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CA9D3F9-A0D3-4CB4-87E2-DE0BF659E405}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CA9D3F9-A0D3-4CB4-87E2-DE0BF659E405}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CA9D3F9-A0D3-4CB4-87E2-DE0BF659E405}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
