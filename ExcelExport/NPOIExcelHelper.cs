@@ -11,10 +11,8 @@ namespace ExcelExport
 {
     public class NPOIExcelHelper : IDisposable
     {
-
-        private string filePath = null; //文件名
         private IWorkbook workbook = null;
-        private FileStream fs = null;
+        private FileStream fileStream = null;
         private bool disposed;
 
         /// <summary>
@@ -23,7 +21,11 @@ namespace ExcelExport
         /// <param name="filePath">文件路径(名)</param>
         public NPOIExcelHelper(string filePath)
         {
-            this.filePath = filePath;
+            fileStream = new FileStream(filePath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
+            if (filePath.IndexOf(".xlsx") > 0) // 2007版本
+                workbook = new XSSFWorkbook();
+            else if (filePath.IndexOf(".xls") > 0) // 2003版本
+                workbook = new HSSFWorkbook();
             disposed = false;
         }
 
@@ -44,12 +46,6 @@ namespace ExcelExport
             int j = 0;
             int count = 0;
             ISheet sheet = null;
-
-            fs = new FileStream(filePath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
-            if (filePath.IndexOf(".xlsx") > 0) // 2007版本
-                workbook = new XSSFWorkbook();
-            else if (filePath.IndexOf(".xls") > 0) // 2003版本
-                workbook = new HSSFWorkbook();
 
             try
             {
@@ -95,14 +91,11 @@ namespace ExcelExport
                         sheet.AddMergedRegion(new CellRangeAddress(count - 1, count - 1, 0, (colums - 1) > 0 ? (colums - 1) : colums));
                     }
 
-
-
                     IRow rowTime = sheet.CreateRow(count++);
                     rowTime.CreateCell(0).SetCellValue($"导出时间:{now.ToString("yyyy/MM/dd HH:mm:ss")}");
                     sheet.AddMergedRegion(new CellRangeAddress(count - 1, count - 1, 0, (colums - 1) > 0 ? (colums - 1) : colums));
                 }
                 #endregion
-
 
                 if (isColumnWritten == true) //写入DataTable的列名
                 {
@@ -131,16 +124,12 @@ namespace ExcelExport
 
                         if (double.TryParse(data.Rows[i][j].ToString(), out double nx))
                         {
+                            row.CreateCell(j).SetCellValue(nx);
                             //设置单元格的字体颜色
                             IFont fonttest = workbook.CreateFont();
                             fonttest.Color = HSSFColor.Red.Index;
-                            row.CreateCell(j).SetCellValue(nx);
                             testStyle.SetFont(fonttest);
                         }
-                        //else if (DateTime.TryParse(data.Rows[i][j].ToString(), out DateTime zz))
-                        //{
-                        //    row.CreateCell(j).SetCellValue(zz.ToString("yyyy-MM-dd"));
-                        //}
                         else
                         {
                             row.CreateCell(j).SetCellValue(data.Rows[i][j].ToString());
@@ -153,7 +142,7 @@ namespace ExcelExport
                     }
                     ++count;
                 }
-                workbook.Write(fs); //写入到excel
+                workbook.Write(fileStream); //写入到excel
                 return count;
             }
             catch (Exception ex)
@@ -162,7 +151,6 @@ namespace ExcelExport
                 return -1;
             }
         }
-
 
         #region Dispoose释放
         public void Dispose()
@@ -177,11 +165,11 @@ namespace ExcelExport
             {
                 if (disposing)
                 {
-                    if (fs != null)
-                        fs.Close();
+                    if (fileStream != null)
+                        fileStream.Close();
                 }
 
-                fs = null;
+                fileStream = null;
                 disposed = true;
             }
         }
