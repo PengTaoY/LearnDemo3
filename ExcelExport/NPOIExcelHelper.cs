@@ -12,7 +12,7 @@ namespace ExcelExport
     public class NPOIExcelHelper : IDisposable
     {
 
-        private string fileName = null; //文件名
+        private string filePath = null; //文件名
         private IWorkbook workbook = null;
         private FileStream fs = null;
         private bool disposed;
@@ -20,10 +20,10 @@ namespace ExcelExport
         /// <summary>
         /// NPOI操作Excel类
         /// </summary>
-        /// <param name="fileName">文件名</param>
-        public NPOIExcelHelper(string fileName)
+        /// <param name="filePath">文件路径(名)</param>
+        public NPOIExcelHelper(string filePath)
         {
-            this.fileName = fileName;
+            this.filePath = filePath;
             disposed = false;
         }
 
@@ -45,10 +45,10 @@ namespace ExcelExport
             int count = 0;
             ISheet sheet = null;
 
-            fs = new FileStream(fileName, FileMode.OpenOrCreate, FileAccess.ReadWrite);
-            if (fileName.IndexOf(".xlsx") > 0) // 2007版本
+            fs = new FileStream(filePath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
+            if (filePath.IndexOf(".xlsx") > 0) // 2007版本
                 workbook = new XSSFWorkbook();
-            else if (fileName.IndexOf(".xls") > 0) // 2003版本
+            else if (filePath.IndexOf(".xls") > 0) // 2003版本
                 workbook = new HSSFWorkbook();
 
             try

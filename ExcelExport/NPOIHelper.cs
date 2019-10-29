@@ -4,11 +4,10 @@ using System.ComponentModel;
 using System.Data;
 using System.IO;
 using System.Reflection;
-using System.Text;
 
 namespace ExcelExport
 {
-   public class NPOIHelper
+    public class NPOIHelper
     {
         /// <summary>
         /// 
@@ -87,17 +86,16 @@ namespace ExcelExport
                 Directory.CreateDirectory(sWebRootFolder);
             }
 
-            FileInfo file = new FileInfo(Path.Combine(sWebRootFolder, fileName));
+            var fileString = Path.Combine(sWebRootFolder, fileName);
 
-
-            using (NPOIExcelHelper excelHelper = new NPOIExcelHelper(file.ToString()))
+            using (NPOIExcelHelper excelHelper = new NPOIExcelHelper(fileString))
             {
                 excelHelper.DataTableToExcel(dataTable, sheetName, true, tableName, DateTime.Now, filter);
             }
 
             #endregion
 
-            return new ExportToExcelResponse { local_path = file.ToString(), path = downloadFolder + fileName, success = true };
+            return new ExportToExcelResponse { local_path = fileString, path = downloadFolder + fileName, success = true };
         }
     }
 }
