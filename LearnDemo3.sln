@@ -41,7 +41,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScoketTest", "ScoketTest\Sc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcelExport", "ExcelExport\ExcelExport.csproj", "{B119E462-D70D-4F9E-AEFA-AC8F9E435F0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "operxls", "operxls\operxls.csproj", "{7FA16BD6-9EA4-4DAC-BD4E-C9D894F3EBC8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "operxls", "operxls\operxls.csproj", "{7FA16BD6-9EA4-4DAC-BD4E-C9D894F3EBC8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pupper", "Pupper\Pupper.csproj", "{18E3570E-309A-4BED-9365-E8EA77A88F4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "单例模式", "单例模式\单例模式.csproj", "{0454E3FC-EB44-4290-8B53-12908EC57C2C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -125,6 +129,14 @@ Global
 		{7FA16BD6-9EA4-4DAC-BD4E-C9D894F3EBC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FA16BD6-9EA4-4DAC-BD4E-C9D894F3EBC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FA16BD6-9EA4-4DAC-BD4E-C9D894F3EBC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18E3570E-309A-4BED-9365-E8EA77A88F4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18E3570E-309A-4BED-9365-E8EA77A88F4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18E3570E-309A-4BED-9365-E8EA77A88F4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18E3570E-309A-4BED-9365-E8EA77A88F4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0454E3FC-EB44-4290-8B53-12908EC57C2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0454E3FC-EB44-4290-8B53-12908EC57C2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0454E3FC-EB44-4290-8B53-12908EC57C2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0454E3FC-EB44-4290-8B53-12908EC57C2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
