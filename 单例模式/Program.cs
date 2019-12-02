@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace 单例模式
 {
@@ -6,7 +8,13 @@ namespace 单例模式
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            TaskFactory taskFactory = new TaskFactory();
+            List<Task> taskList = new List<Task>();
+            for (int i = 0; i < 5; i++)
+            {
+                taskList.Add(taskFactory.StartNew(() => { Singleton singleton = Singleton.CreateInstance(); }));
+            }
+            Console.ReadKey();
         }
     }
 }
