@@ -3,7 +3,7 @@ using System;
 
 namespace Pupper
 {
-    class Program
+    class Program  
     {
         static void Main(string[] args)
         {
