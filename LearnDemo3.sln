@@ -47,7 +47,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pupper", "Pupper\Pupper.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "单例模式", "单例模式\单例模式.csproj", "{0454E3FC-EB44-4290-8B53-12908EC57C2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITextSharpDemo", "ITextSharpDemo\ITextSharpDemo.csproj", "{FA559D9A-9475-45DF-922E-439A31572397}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ITextSharpDemo", "ITextSharpDemo\ITextSharpDemo.csproj", "{FA559D9A-9475-45DF-922E-439A31572397}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Html2Pdf", "Html2Pdf\Html2Pdf.csproj", "{ABFB1E6C-5DAB-45EB-8702-DB2255EA24EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -143,6 +145,10 @@ Global
 		{FA559D9A-9475-45DF-922E-439A31572397}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA559D9A-9475-45DF-922E-439A31572397}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA559D9A-9475-45DF-922E-439A31572397}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABFB1E6C-5DAB-45EB-8702-DB2255EA24EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABFB1E6C-5DAB-45EB-8702-DB2255EA24EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABFB1E6C-5DAB-45EB-8702-DB2255EA24EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABFB1E6C-5DAB-45EB-8702-DB2255EA24EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
