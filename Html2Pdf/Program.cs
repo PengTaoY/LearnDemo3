@@ -74,46 +74,55 @@ namespace Html2Pdf
         /// <returns>转换后的pdf文件路径</returns>
         static string ConvertImg2PDF(string imgFilePath, string pdfName)
         {
-            string pdfResult = string.Empty;
-            string path = $@"{Directory.GetCurrentDirectory()}\tempfile";
-            string pdfFilePath = $@"{Directory.GetCurrentDirectory()}\" + pdfName;
-
-            if (Directory.Exists(path) == false)
+            if (string.IsNullOrEmpty(imgFilePath))
             {
-                Directory.CreateDirectory(path);
+                Console.WriteLine($"图片生成PDF出错了,错误原因：图片路径为空");
+                return "";
             }
-
-            try
+            else
             {
-                var document = new Document(PageSize.A4, 25, 25, 25, 25);
-                using (var stream = new FileStream(pdfName, FileMode.Create, FileAccess.Write, FileShare.None))
+                string pdfResult = string.Empty;
+                string path = $@"{Directory.GetCurrentDirectory()}\tempfile";
+                string pdfFilePath = $@"{Directory.GetCurrentDirectory()}\" + pdfName;
+
+                if (Directory.Exists(path) == false)
                 {
-                    PdfWriter.GetInstance(document, stream);
-                    document.Open();
-                    using (var imageStream = new FileStream(imgFilePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
-                    {
-                        var image = Image.GetInstance(imageStream);
-                        if (image.Height > PageSize.A4.Height - 25)
-                        {
-                            image.ScaleToFit(PageSize.A4.Width - 25, PageSize.A4.Height - 25);
-                        }
-                        else if (image.Width > PageSize.A4.Width - 25)
-                        {
-                            image.ScaleToFit(PageSize.A4.Width - 25, PageSize.A4.Height - 25);
-                        }
-                        image.Alignment = Element.ALIGN_MIDDLE;
-                        document.Add(image);
-                    }
-
-                    document.Close();
+                    Directory.CreateDirectory(path);
                 }
-                pdfResult = pdfFilePath;
+
+                try
+                {
+                    var document = new Document(PageSize.A4, 25, 25, 25, 25);
+                    using (var stream = new FileStream(pdfName, FileMode.Create, FileAccess.Write, FileShare.None))
+                    {
+                        PdfWriter.GetInstance(document, stream);
+                        document.Open();
+                        using (var imageStream = new FileStream(imgFilePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            var image = Image.GetInstance(imageStream);
+                            if (image.Height > PageSize.A4.Height - 25)
+                            {
+                                image.ScaleToFit(PageSize.A4.Width - 25, PageSize.A4.Height - 25);
+                            }
+                            else if (image.Width > PageSize.A4.Width - 25)
+                            {
+                                image.ScaleToFit(PageSize.A4.Width - 25, PageSize.A4.Height - 25);
+                            }
+                            image.Alignment = Element.ALIGN_MIDDLE;
+                            document.Add(image);
+                        }
+
+                        document.Close();
+                    }
+                    pdfResult = pdfFilePath;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine($"图片生成PDF出错了,错误原因：{e.Message}");
+                }
+
+                return pdfResult;
             }
-            catch (Exception e)
-            {
-                Console.WriteLine($"图片生成PDF出错了,错误原因：{e.Message}");
-            }
-            return pdfResult;
         }
     }
 }
