@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.329
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29609.76
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "递归", "递归\递归.csproj", "{F501C887-7FDD-4D1A-9CD5-C586DC276F9E}"
 EndProject
@@ -23,7 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LearnDemo3ML.ConsoleApp", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateOperator", "DateOperator\DateOperator.csproj", "{350ABECE-5EBF-47D8-8668-508C188CD85E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoTo语句", "GoTo语句\GoTo语句.csproj", "{FD6FC84B-FD08-4DF7-99AF-7D4193AF17C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoTo语句", "GoTo语句\GoTo语句.csproj", "{FD6FC84B-FD08-4DF7-99AF-7D4193AF17C5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LockTest", "LockTest\LockTest.csproj", "{F8F84C16-D6FC-476E-A080-194829680A86}"
 EndProject
@@ -45,7 +45,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "operxls", "operxls\operxls.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pupper", "Pupper\Pupper.csproj", "{18E3570E-309A-4BED-9365-E8EA77A88F4E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "单例模式", "单例模式\单例模式.csproj", "{0454E3FC-EB44-4290-8B53-12908EC57C2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "单例模式", "单例模式\单例模式.csproj", "{0454E3FC-EB44-4290-8B53-12908EC57C2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITextSharpDemo", "ITextSharpDemo\ITextSharpDemo.csproj", "{FA559D9A-9475-45DF-922E-439A31572397}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -137,6 +139,10 @@ Global
 		{0454E3FC-EB44-4290-8B53-12908EC57C2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0454E3FC-EB44-4290-8B53-12908EC57C2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0454E3FC-EB44-4290-8B53-12908EC57C2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA559D9A-9475-45DF-922E-439A31572397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA559D9A-9475-45DF-922E-439A31572397}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA559D9A-9475-45DF-922E-439A31572397}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA559D9A-9475-45DF-922E-439A31572397}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

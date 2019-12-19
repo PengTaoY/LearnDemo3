@@ -1,9 +1,10 @@
 ﻿using PuppeteerSharp;
 using System;
+using System.IO;
 
 namespace Pupper
 {
-    class Program  
+    class Program
     {
         static void Main(string[] args)
         {
@@ -28,9 +29,7 @@ namespace Pupper
                     await page.GoToAsync("http://www.baidu.com");
                     // var html = await page.GetContentAsync();
 
-                    
-
-
+                    var stream = await page.ScreenshotStreamAsync(new ScreenshotOptions { FullPage = true, Type = ScreenshotType.Png });
 
                     //将页面保存为jpg图片
 
