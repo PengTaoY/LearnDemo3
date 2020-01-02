@@ -49,7 +49,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "单例模式", "单例模�
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ITextSharpDemo", "ITextSharpDemo\ITextSharpDemo.csproj", "{FA559D9A-9475-45DF-922E-439A31572397}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Html2Pdf", "Html2Pdf\Html2Pdf.csproj", "{ABFB1E6C-5DAB-45EB-8702-DB2255EA24EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Html2Pdf", "Html2Pdf\Html2Pdf.csproj", "{ABFB1E6C-5DAB-45EB-8702-DB2255EA24EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HAPTest", "HAPTest\HAPTest.csproj", "{FE36B35D-5F37-4988-ABF9-478AFBDCC42C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWTTest", "JWTTest\JWTTest.csproj", "{FFBD4C81-2141-4D0D-8BE1-1F6E2CBE5DF7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -149,6 +153,14 @@ Global
 		{ABFB1E6C-5DAB-45EB-8702-DB2255EA24EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABFB1E6C-5DAB-45EB-8702-DB2255EA24EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABFB1E6C-5DAB-45EB-8702-DB2255EA24EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE36B35D-5F37-4988-ABF9-478AFBDCC42C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE36B35D-5F37-4988-ABF9-478AFBDCC42C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE36B35D-5F37-4988-ABF9-478AFBDCC42C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE36B35D-5F37-4988-ABF9-478AFBDCC42C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFBD4C81-2141-4D0D-8BE1-1F6E2CBE5DF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFBD4C81-2141-4D0D-8BE1-1F6E2CBE5DF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFBD4C81-2141-4D0D-8BE1-1F6E2CBE5DF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFBD4C81-2141-4D0D-8BE1-1F6E2CBE5DF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
